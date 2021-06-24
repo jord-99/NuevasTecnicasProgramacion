@@ -21,6 +21,15 @@ app.get("/saludo", (req, res) => {
     });
 });
 
+app.get('/saludo/:nombre',(req,res)=>{
+    const {params}=req; 
+
+    //const nombre =req.params.nombre
+    res.json({
+        nombre: params.nombre,
+    });
+});
+
 app.listen(3000, () => {
     console.log("Servidor escuchando en http://localhost:3000")
 })
