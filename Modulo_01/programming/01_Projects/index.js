@@ -3,32 +3,20 @@ const express = require('express'); //requiero el paquete express
 //genero una aplicacion express 
 const app = express()
 //endpoint
-app.get('/', (req, res) => {
-    res.send("HOLA MUNDO, con express")
-})
+const{RouterIndex} = require('./routes/index')
 
-app.get("/saludo", (req, res) => {
-    //a las query acedemos con req.query
-    //console.log(req.query);
-   const { 
-        query : { nombre, apellido },
-     } = req; 
- /* const nombre = req.query.nombre
- const apellido = req.query.apellido */
+app.use("/", RouterIndex);
+//app.use("/user", RouterIndex);
+//app.use("/user/data", RouterIndex);
+//app.use(RouterIndex);cd 
+/*
+"/" + "/" = "//" => "/"
+"/" + "/saludo" = "//saludo" => "/saludo"
+"/" + "/saludo/:nombre" = "//saludo/:nombre" => "/saludo/:nombre"
 
-    res.json({
-        saludo: `Hola soy ${nombre} ${apellido}`,
-    });
-});
-
-app.get('/saludo/:nombre',(req,res)=>{
-    const {params}=req; 
-
-    //const nombre =req.params.nombre
-    res.json({
-        nombre: params.nombre,
-    });
-});
+"/user" + "/saludo" = "/user/saludo"
+"/user/data" + "/saludo" = "/user/data/saludo" 
+*/
 
 app.listen(3000, () => {
     console.log("Servidor escuchando en http://localhost:3000")
