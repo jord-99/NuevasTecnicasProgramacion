@@ -35,7 +35,7 @@ router
         }else{
 
             res.json({
-                msg: "Usuarios Filtrados por ID",
+                msg: "Usuarios filtrados por ID",
                 body:[filtrarID]
             })
 
@@ -62,13 +62,13 @@ router
         if (bandera === true) {
             
             res.json({
-                msg: "Usuarios Filtrados por Apellido",
+                msg: "Usuarios filtrados por el apellido",
                 body:[traermail]
             })
 
         } else {
             res.json({
-                msg: `El Apellido ${apellido} no existe en nuestra base de datos`,
+                msg: `El Apellido ${apellido}  no existe en nuestra base de datos`,
                 body:[]
             })
         }
