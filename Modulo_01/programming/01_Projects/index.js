@@ -1,11 +1,11 @@
-const express = require('express'); //requiero el paquete express
+//const express = require('express'); //requiero el paquete express
 
 //genero una aplicacion express 
-const app = express()
+//const app = express()
 //endpoint
-const{RouterIndex} = require('./routes/index')
+//const{RouterIndex} = require('./routes/index')
 
-app.use("/", RouterIndex);
+//app.use("/", RouterIndex);
 //app.use("/user", RouterIndex);
 //app.use("/user/data", RouterIndex);
 //app.use(RouterIndex);cd 
@@ -18,9 +18,13 @@ app.use("/", RouterIndex);
 "/user/data" + "/saludo" = "/user/data/saludo" 
 */
 
-app.listen(3000, () => {
-    console.log("Servidor escuchando en http://localhost:3000")
-})
+//app.listen(3000, () => {
+    //console.log("Servidor escuchando en http://localhost:3000")
+//})
+
+
+
+
 
 
 

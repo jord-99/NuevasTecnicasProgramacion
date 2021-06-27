@@ -1,4 +1,4 @@
-//traemos el paquete
+/* //traemos el paquete
 const { Router } = require('express');
 //const data = require('.../data.json')
 //Inicalizamos router
@@ -28,9 +28,10 @@ router
 //Exportamos las rutas
 module.exports.RouterIndex = router;
 
-
 //module= {
     //exports: {
     //    RouterIndex:router
   //  }
-//}
+//} */
+
+

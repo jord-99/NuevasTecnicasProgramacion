@@ -2,13 +2,13 @@
   "name": "servidor-web",
   "version": "1.0.0",
   "description": "Uso de NPM",
-  "main": "index.js",
+  "main": "index2.js",
   "scripts": {
-    "dev":"nodemon"
+    "dev": "nodemon index2.js"
   },
   "keywords": [
     "practica",
-    "npm"
+    "ntp"
   ],
   "author": "Jordan C.",
   "license": "MIT",
