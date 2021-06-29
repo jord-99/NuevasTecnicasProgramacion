@@ -1,15 +1,16 @@
-/* //traemos el paquete
+//traemos el paquete
 const { Router } = require('express');
-//const data = require('.../data.json')
+const data = require('../data.json');
+const { User } = require('../lib/Schema/User');
 //Inicalizamos router
 const router = Router()
-
+const{DataValidator} = require("../middlewares/DataValidator");
 //creacion de los endpoint
 router
   .get("/", (req, res) => {
-    res.send("HOLA MUNDO, con express");
+    res.send('Hola mundo ocn express');
   })
-  .get("/saludo", (req, res) => {
+  .get("/saludo", DataValidator("query", User), (req, res) => {
     const { query } = req;
     res.json({
       saludo: `Hola soy ${query.nombre} ${query.apellido}`,
@@ -32,6 +33,6 @@ module.exports.RouterIndex = router;
     //exports: {
     //    RouterIndex:router
   //  }
-//} */
+//} 
 
 
