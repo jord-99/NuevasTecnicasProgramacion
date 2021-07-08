@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CharactersService } from '../services/characters.service';
 
 @Component({
   selector: 'app-characters',
@@ -7,18 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CharactersComponent implements OnInit {
-  URL: string = "https://rickandmortyapi.com/api/character"
+  // URL: string = "https://rickandmortyapi.com/api/character"
   characters: Array<any> = [];
 
-  constructor() { }
+  constructor(private service: CharactersService) { }
 
   ngOnInit(): void {
-    this.getCharacters()
+    /* this.getCharacters()
     .then(data => {
       this.characters= data.results
       console.log(this.characters)
+    }) */
+    this.service.getCharacters().then(data => {
+      this.characters= data.results
+      //console.log(this.characters)
     })
   }
 
-  getCharacters = () => fetch(this.URL).then((response) => response.json())
+  // getCharacters = () => fetch(this.URL).then((response) => response.json())
 }

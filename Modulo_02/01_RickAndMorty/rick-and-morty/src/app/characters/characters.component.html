@@ -2,9 +2,11 @@
 <div>
     <h2>Lista de personajes</h2>
     <ul>
-        <li *ngFor="let item of characters">
-            <p>{{ item.name }}</p>
+        <li *ngFor="let character of characters">
+            <!-- <p>{{ item.name }}</p>
             <p>{{ item.species }}</p>
+            <p><img src={{item.image}}></p> -->
+            <app-card [character]="character"></app-card>
         </li>
     </ul>
 </div>
